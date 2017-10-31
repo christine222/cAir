@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Dnf-9D-9Sz">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Swipe View Controller-->
+        <scene sceneID="73i-ur-AKk">
+            <objects>
+                <viewController storyboardIdentifier="rootSwipe" id="Dnf-9D-9Sz" customClass="SwipeViewController" customModule="cAir" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="n7S-uF-Nsb"/>
+                        <viewControllerLayoutGuide type="bottom" id="gWw-be-7RH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="oFp-Sz-2Cv">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Thy-Kq-6UF">
+                                <rect key="frame" x="281" y="555" width="39" height="30"/>
+                                <state key="normal" title="home"/>
+                                <connections>
+                                    <action selector="homeButton:" destination="Dnf-9D-9Sz" eventType="touchUpInside" id="DtT-dP-VjN"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Device Name: Red32_Dot" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EeB-Ey-hVN">
+                                <rect key="frame" x="229" y="513" width="142" height="17"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="12"/>
+                                <color key="textColor" red="0.17761068938626212" green="0.52291195643225741" blue="0.83761458333333327" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Yuj-q1-Cfi">
+                                <rect key="frame" x="149" y="35" width="302" height="29"/>
+                                <segments>
+                                    <segment title="Image" width="100"/>
+                                    <segment title="Graph" width="100"/>
+                                    <segment title="Location" width="100"/>
+                                </segments>
+                                <color key="tintColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="indexChanged:" destination="Dnf-9D-9Sz" eventType="valueChanged" id="Voi-km-Cpg"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="July 7, 2016 02:04:47 PM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fJY-ih-cHi">
+                                <rect key="frame" x="231" y="532" width="138" height="16"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="12"/>
+                                <color key="textColor" red="0.25435461220427702" green="0.5676588849988764" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" pagingEnabled="YES" showsVerticalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1qf-eK-UTC">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Yuj-q1-Cfi" firstAttribute="centerX" secondItem="oFp-Sz-2Cv" secondAttribute="centerX" id="2td-K8-I38"/>
+                            <constraint firstItem="1qf-eK-UTC" firstAttribute="top" secondItem="n7S-uF-Nsb" secondAttribute="bottom" id="3bk-7a-Nvk"/>
+                            <constraint firstItem="Thy-Kq-6UF" firstAttribute="top" secondItem="EeB-Ey-hVN" secondAttribute="bottom" constant="25" id="9Du-rY-jco"/>
+                            <constraint firstItem="gWw-be-7RH" firstAttribute="top" secondItem="1qf-eK-UTC" secondAttribute="bottom" id="Agg-gu-tQm"/>
+                            <constraint firstItem="EeB-Ey-hVN" firstAttribute="centerX" secondItem="oFp-Sz-2Cv" secondAttribute="centerX" id="IrG-e2-WMB"/>
+                            <constraint firstItem="Thy-Kq-6UF" firstAttribute="centerX" secondItem="oFp-Sz-2Cv" secondAttribute="centerX" id="a1A-Gp-yiE"/>
+                            <constraint firstItem="gWw-be-7RH" firstAttribute="top" secondItem="Thy-Kq-6UF" secondAttribute="bottom" constant="15" id="etL-UM-CYB"/>
+                            <constraint firstAttribute="trailing" secondItem="1qf-eK-UTC" secondAttribute="trailing" id="fgK-6I-nuV"/>
+                            <constraint firstItem="fJY-ih-cHi" firstAttribute="centerX" secondItem="oFp-Sz-2Cv" secondAttribute="centerX" id="hxM-y4-pw4"/>
+                            <constraint firstItem="Yuj-q1-Cfi" firstAttribute="top" secondItem="n7S-uF-Nsb" secondAttribute="bottom" constant="15" id="iCK-Ed-iJ6"/>
+                            <constraint firstItem="1qf-eK-UTC" firstAttribute="leading" secondItem="oFp-Sz-2Cv" secondAttribute="leading" id="tBm-YR-dI7"/>
+                            <constraint firstItem="EeB-Ey-hVN" firstAttribute="top" secondItem="fJY-ih-cHi" secondAttribute="bottom" constant="-35" id="zdm-GW-8yF"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="dateTime" destination="fJY-ih-cHi" id="Bl0-MY-kIp"/>
+                        <outlet property="deviceName" destination="EeB-Ey-hVN" id="c41-xH-dG3"/>
+                        <outlet property="scrollView" destination="1qf-eK-UTC" id="hxa-Yr-lis"/>
+                        <outlet property="segmentControl" destination="Yuj-q1-Cfi" id="U55-pL-phQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MTR-vF-Gdg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="212" y="308"/>
+        </scene>
+    </scenes>
+</document>
